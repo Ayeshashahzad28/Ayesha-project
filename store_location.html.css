@@ -1,0 +1,378 @@
+/* universal selector */
+* 
+{
+  box-sizing: border-box;
+}
+/* body */
+body
+{
+    background-color:white;
+    color: #2c2c2c;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* nav bar */
+h3
+{
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    transition: 0.7s;
+}
+h3:hover
+{
+     background-color: #f6e3aa;
+    padding: 10px;
+    border-radius:0px 20px 0px 20px ;
+    margin-left: 20px;
+}
+nav .bar
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+nav
+{
+    background-color: #a86c4c;
+    color: #2c2c2c;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    position: sticky;
+    z-index: 1;
+    top: 0%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+nav ul
+{
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-left: 25%;
+}
+nav ul li a
+{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    transition: 0.7s;
+}
+nav ul li a:hover
+{
+    background-color: #f6e3aa;
+    padding: 10px;
+    border-radius:0px 20px 0px 20px ;
+}
+nav ul li a i
+{
+    color: #413b3b;
+}
+/* style on dropdown */
+.dropdown-list 
+{
+    display: none;
+    position: absolute;
+    background-color: #f6e3aa;
+    width: 120px;
+    top: 53px;
+    margin-left: -5px;
+    border: 2px solid black;
+    border-radius:0px 20px 0px 20px ;
+    padding: 10px 0 10px 10px;
+}
+.dropdown-list li a 
+{
+    padding: 10px 15px;
+}
+.dropdown .dropdown-list
+{
+    display: none;
+}
+.dropdown:hover .dropdown-list 
+{
+    display: block;
+}
+.dropdown-list a:hover 
+{
+    background: none;
+    padding: 0%;
+    margin-left: 10px;
+}
+/* section */
+.location {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.location img {
+  width: 100%;
+  display: block;
+}
+.location h1 {
+  position: absolute;
+  top: 37%;
+  left: 45%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px 40px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.location a {
+  position: absolute;
+  top: 59%;
+  left: 39%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+h1 {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 10%;
+}
+h1:hover {
+  text-shadow: 5px 10px 15px grey;
+}
+
+input {
+  border: none;
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+  background-color: white;
+  border-bottom: 2px solid black;
+  padding: 10px;
+}
+.icons a 
+    {
+        margin: 5% -55px 0 21%;
+        color: black;
+        display: inline-block;
+        font-size: 20px;
+        transition: 0.7s;
+    }
+    .icons a:hover
+    {
+        font-size: 30px;
+    }
+
+/* conatiner */
+.container
+{
+    background-color: #2c2c2c;
+    color: #f6e3aa;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    h4
+    {
+        color: #e8b77d;
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 30px;
+    }
+}
+.first a
+{
+    text-decoration: none;
+    color: #f6e3aa;
+    text-transform: capitalize;
+    text-align: left;
+    margin-left: 40%;
+    line-height: 30px;
+}
+.second a
+{
+    color: #f6e3aa;
+    text-transform: capitalize;
+    text-align: left;
+    margin-left: 36%;
+    line-height: 30px;
+    text-decoration: none;
+}
+.third
+{
+    margin: 20%;
+    cursor: pointer;
+    a
+    {
+        color: #f6e3aa;
+    }
+}
+/* footer */
+footer
+{
+    border-top: 2px solid wheat;
+    text-align: center;
+    padding: 20px;
+    background-color: #2c2c2c;
+    color: #f6e3aa;
+    transition: 0.7s;
+}
+footer:hover
+{
+    color: #2c2c2c;
+    background-color: #e8b77d;
+}
+/* media quaries */
+@media (max-width: 480px)
+{
+    nav .bar 
+    {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    nav ul
+    {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        gap: 0;
+    }
+    nav ul li a 
+    {
+        display: block;
+        padding: 10px;
+    }
+    .location
+    {
+        h1
+        {
+            top: 0%;
+           margin: 0px 10px 0 -5px;   
+        }
+        a
+        {
+            left: -30%;
+           margin-top: 2%;        
+            left: 0%;        
+        }
+    }
+    .container
+    {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .container a
+    {
+        margin-left: 10%;
+    }
+    .container h4 
+    {
+        font-size: 20px;
+    }
+}
+@media(min-width: 481px) and (max-width: 589px)
+{
+    nav .bar 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul 
+    {
+    margin-left: 0%;
+    gap: 0%;
+    }
+    nav ul li a 
+    {
+        display: block;
+        padding: 10px;
+    }
+    .location
+    {
+        h1
+        {
+            top: 37%;
+            left: 45%;  
+        }
+        a
+        {
+            top: 69%;
+            left: 39%;  
+        }
+    }
+    .container 
+    {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .container h4 
+    {
+        font-size: 20px;
+    }
+    .container a
+    {
+        margin-left: 10%;
+    }
+    footer 
+    {
+        padding: 10px;
+    }
+}
+@media (min-width: 590px) and (max-width: 768px) 
+{
+    nav .bar 
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    nav ul 
+    {
+        flex-wrap: wrap;
+        margin-left: auto;
+        justify-content: center;
+    }
+    .location
+    {
+        h1
+        {
+            top: 37%;
+            left: 45%;  
+        }
+        a
+        {
+            top: 69%;
+            left: 39%;  
+        }
+    }
+    .container 
+    {
+        grid-template-rows: 1fr ;
+        gap: 15px;  
+    }
+    .container h4 
+    {
+        font-size: 20px;
+    }
+    .container a
+    {
+        margin-left: 10%;
+    }
+    footer 
+    {
+    font-size: 14px;
+    }
+}
+@media(min-width: 767px) and (max-width:1024px)
+{
+    .location
+    {
+        h1
+        {
+            top: 37%;
+            left: 45%;  
+        }
+        a
+        {
+            top: 69%;
+            left: 39%;  
+        }
+    }
+}
